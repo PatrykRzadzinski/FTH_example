@@ -1,3 +1,4 @@
+# This allows drone to build the image as per info from the Github webhook
 kind: pipeline
 type: docker
 name: default
@@ -8,6 +9,9 @@ steps:
   commands:
   - echo hello
   - echo world
+
+# This allows publishing the image as long as previous steps were built successfully to an image registry in AWS
+# Requires AWS ECR plugin as explained here: http://plugins.drone.io/drone-plugins/drone-ecr/
 #- name: publish  
 #  image: plugins/ecr
 #  settings:
