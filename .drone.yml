@@ -1,0 +1,18 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: greeting
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+#- name: publish  
+#  image: plugins/ecr
+#  settings:
+#    create_repository: true
+#    repo: bar
+#    registry: <account_id>.dkr.ecr.JAKI_REGION.amazonaws.com
+#    region: NASZ_REGION
+#
