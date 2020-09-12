@@ -11,8 +11,11 @@ steps:
 #- name: publish  
 #  image: plugins/ecr
 #  settings:
+#    access_key:
+#      from_secret: aws_access_key_id
+#    secret_key:
+#      from_secret: aws_secret_access_key
 #    create_repository: true
 #    repo: bar
 #    registry: <account_id>.dkr.ecr.JAKI_REGION.amazonaws.com
 #    region: NASZ_REGION
-#
